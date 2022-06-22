@@ -14,11 +14,11 @@ public class SwapMoney {
     }
 
     @PostMapping("/outmoney")
-    public String outMoney(@RequestParam String USD, @RequestParam String currencyRate, @RequestParam double result, Model model) {
-        model.addAttribute("usd", USD);
-        model.addAttribute("currency", currencyRate);
-        result = Integer.parseInt(USD) * Integer.parseInt(currencyRate);
-        model.addAttribute("vnd", result);
-        return "result";
+    public String outMoney(@RequestParam String USD, @RequestParam String currencyRate, Model model) {
+        model.addAttribute("USD", USD);
+        model.addAttribute("currencyRate", currencyRate);
+        double result = Integer.parseInt(USD) * Integer.parseInt(currencyRate);
+        model.addAttribute("result", result);
+        return "swap";
     }
 }

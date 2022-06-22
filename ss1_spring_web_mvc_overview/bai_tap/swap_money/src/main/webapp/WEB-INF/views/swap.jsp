@@ -19,12 +19,25 @@
 </head>
 <body>
 <h1>Swap Money Online </h1>
+<div class="row">
+    <div class="col-md-6">
+        <form action="/outmoney" method="post">
+            <label>USD :</label>
+            <input class="form-control" type="text" name="USD" placeholder="Input your USD you want to change" value="">
 
-<form action="/outmoney" method="post">
-    <input  type="text" name="USD" placeholder="Input your USD you want to change ">
-    <input type="number" name="currencyRate" placeholder="22000 VNĐ" disabled>
-    <input type="submit" value="Swap" class="btn btn-success">
-</form>
-
+            <label>Current Rate :</label>
+            <input class="form-control" type="text" name="currencyRate" value="22000" readonly>
+            <br>
+            <input class="btn btn-primary btn-block" type="submit" value="Click to convert">
+        </form>
+    </div>
+    <div class="col-md-6 border-left">
+        <br>
+        <br>
+        <h3> USD your input = ${USD}</h3>
+        <h3> Current Rate = ${currencyRate}</h3>
+        <h3> Result = ${result} </h3>
+    </div>
+</div>
 </body>
 </html>
