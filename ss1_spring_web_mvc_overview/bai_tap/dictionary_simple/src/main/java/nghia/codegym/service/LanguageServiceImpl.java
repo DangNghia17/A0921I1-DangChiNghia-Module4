@@ -1,17 +1,17 @@
 package nghia.codegym.service;
 
-import nghia.codegym.entity.Language;
 import nghia.codegym.repository.LanguageRepo;
-import nghia.codegym.repository.LanguageRepoImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import java.util.Map;
 
-import java.util.List;
-
+@Service
 public class LanguageServiceImpl implements LanguageService {
-    LanguageRepo languageRepo = new LanguageRepoImpl();
+    @Autowired
+    private LanguageRepo languageRepo;
 
-    @Override
-    public List<Language> showList() {
-        return languageRepo.showList();
+    public Map<String, String> showLanguageMap() {
+        return languageRepo.showLanguageMap();
     }
 
     @Override
