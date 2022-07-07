@@ -1,7 +1,9 @@
 package com.nghia.service;
 
-import java.util.List;
+import org.springframework.stereotype.Service;
 
+import java.util.List;
+@Service
 public interface ILanguageService {
     List<String> languageAllList();
 }
