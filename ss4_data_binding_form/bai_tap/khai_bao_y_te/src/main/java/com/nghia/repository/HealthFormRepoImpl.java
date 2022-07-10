@@ -11,17 +11,17 @@ public class HealthFormRepoImpl implements IHealthFormRepo{
         genderList.add("Nam");
         genderList.add("Nữ");
 
-        nationalityList.add("Việt Nam");
-        nationalityList.add("Lào");
-        nationalityList.add("Thái Lan");
+        nationalityList.add("Viet Nam");
+        nationalityList.add("Lao");
+        nationalityList.add("Thai Lan");
         nationalityList.add("Campuchia");
-        nationalityList.add("Trung Quốc");
+        nationalityList.add("Trung Quoc");
         nationalityList.add("Maplaysia");
 
-        travelInfoList.add("Tàu bay");
-        travelInfoList.add("Tàu thuyền");
-        travelInfoList.add("Ô tô");
-        travelInfoList.add("Khác (ghi rõ)");
+        travelInfoList.add("Tau bay");
+        travelInfoList.add("Tau thuyen");
+        travelInfoList.add("O to");
+        travelInfoList.add("Khac (ghi ro)");
     }
     @Override
     public List<String> genderList() {

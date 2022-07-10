@@ -31,31 +31,31 @@ public class HealthFormServiceImpl implements IHealthFormService {
 
         Map<String, String> error = new HashMap<>();
         if (healthDeclare.getName().equals("")) {
-            error.put("name", "Bạn chưa nhập mục này");
+            error.put("name", "Ban chua nhap vao muc nay!");
         }
         if (healthDeclare.getBirthday().equals("")) {
-            error.put("birthday", "Bạn chưa nhập mục này");
+            error.put("birthday", "Ban chua nhap vao muc nay!");
         }
         if (healthDeclare.getIdCard().equals("")) {
-            error.put("idCard", "Bạn chưa nhập mục này");
+            error.put("idCard", "Ban chua nhap vao muc nay!");
         }
         if (healthDeclare.getTravelInfo() == null) {
-            error.put("travelInfo", "Bạn chưa nhập mục này");
+            error.put("travelInfo", "Ban chua nhap vao muc nay!");
         }
         if (healthDeclare.getNumberVehicle().equals("")) {
-            error.put("numberVehicle", "Bạn chưa nhập mục này");
+            error.put("numberVehicle", "Ban chua nhap vao muc nay!");
         }
         if (healthDeclare.getNumberSeat().equals("")) {
-            error.put("numberSeat", "Bạn chưa nhập mục này");
+            error.put("numberSeat", "Ban chua nhap vao muc nay!");
         }
         if (healthDeclare.getDateStart().equals("")) {
-            error.put("dateStart", "Bạn chưa nhập mục này");
+            error.put("dateStart", "Ban chua nhap vao muc nay!");
         }
         if (healthDeclare.getDateEnd().equals("")) {
-            error.put("dateEnd", "Bạn chưa nhập mục này");
+            error.put("dateEnd", "Ban chua nhap vao muc nay!");
         }
         if (healthDeclare.getOtherInfo().equals("")) {
-            error.put("otherInfo", "Bạn chưa nhập mục này");
+            error.put("otherInfo", "Ban chua nhap vao muc nay!");
         }
         return error;
     }
