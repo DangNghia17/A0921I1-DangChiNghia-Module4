@@ -17,7 +17,7 @@ public class MusicRepositoryImpl implements IMusicRepository {
     @Override
     public List<Music> findAll() {
         List<Music> musicList = entityManager
-                .createQuery("select c from music_page c")
+                .createQuery("select c from music c")
                 .getResultList();
         return musicList;
         // Native SQL

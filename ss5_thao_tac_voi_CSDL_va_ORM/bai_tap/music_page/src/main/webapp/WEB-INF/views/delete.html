@@ -7,7 +7,7 @@
 <body>
 <h1>Detail product</h1>
 <form method="post" th:action="@{/music/delete}">
-    <table border="1" th:object="${music}">
+    <table border="1" th:object="${musicForm}">
         <tr>
             <td>Name song</td>
             <td ><input type="text" th:field="*{nameSong}"></td>

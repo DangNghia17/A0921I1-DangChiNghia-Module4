@@ -18,7 +18,7 @@
         <th>Action</th>
     </tr>
     <tfbody th:each="m,stt : ${musicList}">
-        <tr th:object="${m}">
+        <tr th:object="${music}">
             <td th:text="*{nameSong}"></td>
             <td th:text="*{singer}"></td>
             <td th:text="*{typeOfMusic}"></td>

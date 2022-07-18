@@ -8,7 +8,7 @@
 <h1>Create Music</h1>
 <a th:href="@{/music/}">Back to list music</a>
 <form th:action="@{/music/create}" method="post" enctype="multipart/form-data">
-    <table border="1" th:object="${musicForm}">
+    <table border="1" th:object="${music}">
         <tr>
             <td><label for="name">Name song</label></td>
             <td><input type="text" id="name" required th:field="*{nameSong}" placeholder="Input name song"></td>

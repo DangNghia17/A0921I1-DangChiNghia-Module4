@@ -1,9 +1,11 @@
 package com.nghia.entity;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity(name = "music_page")
+@Entity(name = "music")
 public class Music {
     @Id
     private String nameSong;
@@ -20,6 +22,8 @@ public class Music {
         this.typeOfMusic = typeOfMusic;
         this.path = path;
     }
+
+
 
     public String getNameSong() {
         return nameSong;

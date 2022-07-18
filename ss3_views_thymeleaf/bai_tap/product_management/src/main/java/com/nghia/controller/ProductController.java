@@ -49,7 +49,7 @@ public class ProductController {
 
     @PostMapping("edit")
     public String update(@ModelAttribute("product") Product product) {
-        productService.update(product.getId(), product);
+        productService.save(product);
         return "redirect:/product/list";
     }
 

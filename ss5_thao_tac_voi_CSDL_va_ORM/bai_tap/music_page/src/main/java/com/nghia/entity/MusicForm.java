@@ -2,6 +2,9 @@ package com.nghia.entity;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.persistence.Entity;
+
+
 public class MusicForm {
     private String nameSong;
     private String singer;
