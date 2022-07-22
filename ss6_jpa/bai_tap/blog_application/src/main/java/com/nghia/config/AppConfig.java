@@ -90,11 +90,26 @@ public class AppConfig extends WebMvcConfigurerAdapter implements ApplicationCon
 //        super.addFormatters(registry);
 //    }
 
+    // Khai báo bean trong file config
+//    @Bean
+//    @Qualifier("studentService1")
+//    public StudentService getStudentService() {
+//        return new StudentServiceImpl();
+//    }
+//
+//    @Bean
+//    public StudentService getStudentService2() {
+//        return new StudentServiceImpl();
+//    }
+//    @Bean
+//    public StudentRepository getStudentRepository() {
+//        return new StudentRepositoryImpl();
+//    }
     @Bean
     public DriverManagerDataSource getDataSource() {
         DriverManagerDataSource datasource = new DriverManagerDataSource();
         datasource.setDriverClassName("com.mysql.jdbc.Driver");
-        datasource.setUrl("jdbc:mysql://localhost:3306/excercise?createDatabaseIfNotExist=true");
+        datasource.setUrl("jdbc:mysql://localhost:3306/music?createDatabaseIfNotExist=true");
         datasource.setUsername("root");
         datasource.setPassword("17102002");
         return datasource;
@@ -136,7 +151,5 @@ public class AppConfig extends WebMvcConfigurerAdapter implements ApplicationCon
         transactionManager.setEntityManagerFactory(entityManagerFactory);
         return transactionManager;
     }
-
-
 
 }
