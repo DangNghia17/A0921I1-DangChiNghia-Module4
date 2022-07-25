@@ -8,7 +8,7 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id ;
-    private String name;
+    private String nameBlog;
 
     @OneToMany( mappedBy = "category")
     private Set<Blog> blog;
@@ -16,9 +16,9 @@ public class Category {
     public Category() {
     }
 
-    public Category(Integer id, String name) {
+    public Category(Integer id, String nameBlog) {
         this.id = id;
-        this.name = name;
+        this.nameBlog = nameBlog;
     }
 
     public Integer getId() {
@@ -29,12 +29,12 @@ public class Category {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNameBlog() {
+        return nameBlog;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameBlog(String nameBlog) {
+        this.nameBlog = nameBlog;
     }
 
     public Set<Blog> getBlog() {

@@ -26,7 +26,7 @@ public class BlogController {
 
     @GetMapping("/create")
     public ModelAndView showFormCreate(Model model) {
-        ModelAndView modelAndView = new ModelAndView("/create");
+        ModelAndView modelAndView = new ModelAndView("views/create");
         model.addAttribute("category", categoryService.findAll());
         model.addAttribute("blog", new Blog());
         return modelAndView;
