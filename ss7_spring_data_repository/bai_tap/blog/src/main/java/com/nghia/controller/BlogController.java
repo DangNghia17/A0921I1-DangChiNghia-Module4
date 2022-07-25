@@ -25,13 +25,6 @@ public class BlogController {
         return "views/list";
     }
 
-//    @GetMapping("/list")
-//    public String showList(Model model , @RequestParam(value = "page", defaultValue = "0") int page ) {
-//        model.addAttribute("blog", blogService.findAll(PageRequest.of(page,5, Sort.by("year"))));
-//        return "views/list";
-//    }
-
-
     @GetMapping("/create")
     public ModelAndView showFormCreate(Model model) {
         ModelAndView modelAndView = new ModelAndView("views/create");
