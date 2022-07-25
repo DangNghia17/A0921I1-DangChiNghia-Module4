@@ -14,22 +14,32 @@
 
 
 <h1>Create new Blog</h1>
-<form action="/create" method="post" th:object="${blog}">
-    <table border="1">
-        <tr>
-            <td>Name</td>
-            <td><input type="text" th:field="*{name}" ></td>
-        </tr>
-        <tr>
-            <td>Content</td>
-            <td><input type="text" th:field="*{content}" ></td>
-        </tr>
-        <tr>
-            <td>
-                <input type="submit" value="Register"/>
-            </td>
-        </tr>
-    </table>
+<form th:action="@{/create}" method="post" th:object="${blog}">
+    <input type="hidden" th:field="*{id}">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Name</label>
+            <input type="text" class="form-control" name="name" placeholder="Name" th:field="*{nameBlog}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Content</label>
+            <input type="text" class="form-control" name="content" placeholder="Content" th:field="*{content}">
+        </div>
+    </div>
+    <div class="form-row" >
+        <div class="form-group col-md-6">
+            <label>Year</label>
+            <input type="date" class="form-control" name="year" th:field="*{year}">
+        </div>
+        <div class="form-group col-md-6">
+            <label style="">Category</label>
+            <select class="form-control" th:field="*{category}">
+                <option th:each="category : ${category}" th:text="${category.nameBlog}" th:value="${category.id}"></option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <button type="submit"  class="btn btn-success">Create</button>
 </form>
 <br>
 <a th:href="@{/list}">Back to list</a>

@@ -6,13 +6,16 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "blog")
 public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String nameBlog;
-    private String content;
 
+//    @Column(name = "nameBlog")
+    private String nameBlog;
+
+    private String content;
     @ManyToOne
     @JoinColumn(name = "category")
     private Category category;
@@ -54,4 +57,21 @@ public class Blog {
     public void setContent(String content) {
         this.content = content;
     }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public LocalDate getYear() {
+        return year;
+    }
+
+    public void setYear(LocalDate year) {
+        this.year = year;
+    }
+
 }
